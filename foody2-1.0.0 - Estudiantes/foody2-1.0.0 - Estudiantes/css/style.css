@@ -1,0 +1,297 @@
+/********** Template CSS **********/
+:root {
+    --primary: #3CB815;
+    --secondary: #F65005;
+    --light: #F7F8FC;
+    --dark: #111111;
+}
+
+
+/*** Section Header ***/
+.section-header {
+    position: relative;
+    padding-top: 25px;
+}
+
+.section-header::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+}
+
+.section-header::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--secondary);
+}
+
+.section-header.text-start::before,
+.section-header.text-start::after {
+    left: 0;
+    transform: translateX(0);
+}
+
+body {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/* Sección Mejores Frutas */
+.mejores-frutas {
+    padding: 60px 0;
+}
+
+.mejores-frutas .contenedor-flex {
+    display: flex;
+    gap: 40px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mejores-frutas .contenedor-flex .img-contenedor {
+    flex: 1;
+    text-align: center;
+    padding-right: 90px;
+    padding-left: 50px;
+}
+
+.mejores-frutas .img-contenedor .img-circular {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.mejores-frutas .text-contenedor {
+    flex: 1;
+}
+
+.mejores-frutas .text-contenedor .text-titulo {
+    width: 90%;
+}
+
+.mejores-frutas .text-contenedor .boton-info {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Sección Nos Caracteriza */
+.nos-caracteriza {
+    padding: 40px 0px;
+    background-color: var(--light);
+}
+
+.nos-caracteriza .section-header {
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.nos-caracteriza .section-header p {
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 500px;
+    
+}
+
+.nos-caracteriza .section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0px 20px;
+    margin: 0px 20px;
+}
+
+.nos-caracteriza .section-item {
+    flex: 1 1 calc(33.333% - 20px); /*el 20 es del gap que se coloco arriba*/
+    box-sizing: border-box;
+    justify-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 20px 20px;
+}
+
+.nos-caracteriza .section-card .text-titulo{
+    margin-bottom: 20px;
+}
+
+.nos-caracteriza .section-card .card-icon{
+    padding-bottom: 20px;
+}
+
+.nos-caracteriza .section-card .boton-info {
+    background-color: white;
+    color: var(--primary);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 2px solid var(--primary);
+    display: inline-block;
+}
+
+/* Sección Nuestros Productos */
+.nuestros-productos {
+    padding: 20px 0;
+    text-align: left;
+    margin: 0 130px;
+}
+
+.nuestros-productos .section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.nuestros-productos .section-container .section-item {
+    width: 45%; 
+}
+
+.nuestros-productos .section-header {
+    text-align: left;
+    padding: 30px 0;
+}
+
+.nuestros-productos .section-header p {
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+}
+
+.nuestros-productos .section-header::before,
+.nuestros-productos .section-header::after {
+    left: 0;
+    transform: translateX(0);
+}
+
+.nuestros-productos ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.nuestros-productos ul li a {
+    padding: 8px 20px;
+    border: 2px solid var(--primary);
+    background: white;
+    color: var(--primary);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.nuestros-productos ul li a:hover,
+.nuestros-productos ul li a.active {
+    background: var(--primary);
+    color: white;
+}
+
+.nuestros-productos .pill-cointainer {
+    margin-top: 40px;
+}
+
+/* Estilos para la grilla de productos */
+.nuestros-productos .products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.nuestros-productos .product-item {
+    flex: 0 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nuestros-productos .product-card {
+    text-align: center;
+}
+
+.nuestros-productos .product-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.nuestros-productos .product-info {
+    margin-bottom: 15px;
+}
+
+.nuestros-productos .product-name {
+    display: block;
+    font-weight: bold;
+    color: var(--dark);
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.nuestros-productos .product-price {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.nuestros-productos .product-actions {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+}
+
+.nuestros-productos .action-item {
+    flex: 1;
+}
+
+.nuestros-productos .action-link {
+    background-color: white;
+    text-align: center;
+    color: var(--dark);
+    border: 2px solid var(--light);
+    font-size: 13px;
+    padding-top: 8px;
+    height: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.nuestros-productos i {
+    color: var(--primary);
+    padding-right: 10px;
+}
+
+.nuestros-productos .action-link:hover {
+    background: var(--primary);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.nuestros-productos .action-link:hover i {
+    color: white;
+    transition: all 0.3s ease;
+}
