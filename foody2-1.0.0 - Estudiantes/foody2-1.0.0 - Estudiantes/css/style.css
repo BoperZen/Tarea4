@@ -150,7 +150,7 @@ body {
 
 /* Sección Nuestros Productos */
 .nuestros-productos {
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: left;
     margin: 0 130px;
 }
@@ -294,4 +294,46 @@ body {
 .nuestros-productos .action-link:hover i {
     color: white;
     transition: all 0.3s ease;
+}
+
+/* Seccion Nuestras Fincas */
+.nuestras-fincas {
+    padding: 60px 0;
+    background-color: var(--primary);
+    color: white;
+}
+
+.nuestras-fincas .section-item {
+    text-align: left;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nuestras-fincas .section-card {
+    padding: 40px;
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nuestras-fincas .section-titulo {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.nuestras-fincas .boton{
+    display: flex;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.nuestras-fincas .boton-info{
+    background-color: var(--secondary);
+    color: white;
+    padding: 20px 50px;
+    text-decoration: none;
+    border-radius: 40px;
+    display: inline-block;
 }
